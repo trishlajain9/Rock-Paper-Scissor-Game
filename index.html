@@ -5,9 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors Game</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
 </head>
 <body>
-    <h1>Rock Paper Scissors </h1>
+    <div class="scroll-container">
+    <div class="scroll-text">
+        Rock Paper Scissors
+        &nbsp;&nbsp;&nbsp;
+        Rock Paper Scissors
+        &nbsp;&nbsp;&nbsp;
+        Rock Paper Scissors
+    </div>
+</div>
     <div class="choices">
         <div class="choice" id = "Rock">
             <img src = "images/rock.jpg" />
@@ -31,7 +40,10 @@
     </div>
     <div class="msg-container"></div>
     <p id = "msg">Play your move</p>
-    <button id="replayBtn"> Replay </button>
+    <button id="replayBtn"> Replay 
+        <i class="fa-solid fa-arrows-rotate"></i>
+    </button> 
+
     <script src="app.js"></script>
 </body>
 </html>
