@@ -2,16 +2,31 @@ let userScore = 0;
 let computerScore = 0;
 
 const choices = document.querySelectorAll(".choice");
+const msg = document.querySelector("#msg");
 
 const genCompChoice = () => {
-    let options = ["rock", "paper", "scissors"];
+    let options = ["Rock", "Paper", "Scissors"];
     const ranIdx = Math.floor(Math.random() * 3);
     return options[ranIdx];
-}
+};
 
 const drawGame = () => {
     console.log("Game was draw.");
-}
+    msg.innerText = "Game was Draw. Play again. ";
+    msg.style.backgroundColor = "#081b31";
+};
+
+const showWinner = (userWin, userChoice, computerChoice) => {
+    if(userWin) {
+        console.log("You Win!");
+        msg.innerText = `You Win!! Your ${userChoice} beats ${computerChoice}`;
+        msg.style.backgroundColor = "green";
+    } else {
+        console.log("You Lose!");
+        msg.innerText = `You Lose. ${computerChoice} beats your ${userChoice}`
+        msg.style.backgroundColor = "red";
+    }
+};
 
 const playGame = (userChoice) => {
     console.log("userChoice = ", userChoice);
@@ -24,18 +39,18 @@ const playGame = (userChoice) => {
     }
     else {
         let userWin = true;
-        if (userChoice === "rock") {
+        if (userChoice === "Rock") {
             //scissors, paper
-           userWin = computerChoice === "paper" ? false : true;
+           userWin = computerChoice === "Paper" ? false : true;
         }
-        else if(userChoice === "paper") {
+        else if(userChoice === "Paper") {
             //rock, scissors
-            userWin = computerChoice === "scissors" ? false : true;  
+            userWin = computerChoice === "Scissors" ? false : true;  
         }
         else {
-            userWin = computerChoice === "rock" ? false : true;
+            userWin = computerChoice === "Rock" ? false : true;
         }
-        showWinner(userWin);
+        showWinner(userWin, userChoice, computerChoice);
     }
 
 }
