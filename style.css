@@ -66,3 +66,15 @@ img {
     padding: 1rem;
     border-radius: 1rem;
 }
+
+#replayBtn{
+    margin-left: 1.5rem;
+    padding: 6px 12px;
+    display: inline;
+    background:#170d11;
+    color:white;
+    border:none;
+    border-radius:12px;
+    font-size:12px;
+    cursor:pointer;
+}

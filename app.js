@@ -6,6 +6,8 @@ const msg = document.querySelector("#msg");
 
 const userScorePara = document.querySelector("#user-score");
 const computerScorePara = document.querySelector("#computer-score");
+const replayBtn=document.getElementById("replayBtn");
+
 
 const genCompChoice = () => {
     let options = ["Rock", "Paper", "Scissors"];
@@ -65,3 +67,14 @@ choices.forEach((choice) => {
         playGame(userChoice);
     })
 } )
+
+replayBtn.addEventListener("click",()=>{
+
+    userScore=0;
+    computerScore=0;
+
+    userScorePara.innerText=userScore;
+    computerScorePara.innerText=computerScore;
+    msg.innerText="Game Restarted!";
+    msg.style.backgroundColor = "#081b31"
+});
