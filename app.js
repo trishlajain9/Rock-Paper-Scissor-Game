@@ -13,6 +13,7 @@ const genCompChoice = () => {
     let options = ["Rock", "Paper", "Scissors"];
     const ranIdx = Math.floor(Math.random() * 3);
     return options[ranIdx];
+    
 };
 
 const drawGame = () => {
@@ -78,3 +79,5 @@ replayBtn.addEventListener("click",()=>{
     msg.innerText="Game Restarted!";
     msg.style.backgroundColor = "#081b31"
 });
+
+

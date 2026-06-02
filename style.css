@@ -29,7 +29,7 @@ h1{
     0 0 5px white,
     0 0 10px #ff4fd8,
     0 0 20px #7df9ff;
-    animation: slide 12s linear infinite;
+    animation: slide 20s linear infinite;
 }
 
 @keyframes slide{
@@ -43,7 +43,7 @@ h1{
 
 }
 
-@keyframes glow{
+/* @keyframes glow{
     0%{
         color:white;
     }
@@ -55,7 +55,7 @@ h1{
     100%{
         color:#7df9ff;
     }
-}
+} */
 
 .choice {
     height: 165px;
@@ -64,16 +64,19 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease;
 }
 
 .choice:hover {
     cursor: pointer;
-    background-color: black;
+    box-shadow:0 0 15px #44638f;
+    transform:scale(1.05);
+    
 }
 
 img {
-    height: 150px;
-    width: 150px;
+    height: 155px;
+    width: 155px;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -115,6 +118,7 @@ img {
     display: inline;
     padding: 1rem;
     border-radius: 1rem;
+    transition:0.4s;
 }
 
 #replayBtn{
@@ -128,4 +132,16 @@ img {
     border-radius:12px;
     font-size:15px;
     cursor:pointer;
+    transition:0.3s;
 }
+
+
+#replayBtn:hover{
+    transform:scale(1.1);
+    background:#eab5df;
+    color:black;
+}
+
+
+
+
