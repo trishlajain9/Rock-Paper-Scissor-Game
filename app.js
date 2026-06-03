@@ -8,6 +8,7 @@ const userScorePara = document.querySelector("#user-score");
 const computerScorePara = document.querySelector("#computer-score");
 const replayBtn=document.getElementById("replayBtn");
 
+const clickSound = new Audio("click.mp3");
 
 const genCompChoice = () => {
     let options = ["Rock", "Paper", "Scissors"];
@@ -64,13 +65,16 @@ const playGame = (userChoice) => {
 choices.forEach((choice) => {
     console.log(choice);
     choice.addEventListener("click", () => {
+        clickSound.currentTime = 0;
+        clickSound.play();
         const userChoice = choice.getAttribute("id");
         playGame(userChoice);
     })
 } )
 
 replayBtn.addEventListener("click",()=>{
-
+    clickSound.currentTime = 0;
+    clickSound.play();
     userScore=0;
     computerScore=0;
 

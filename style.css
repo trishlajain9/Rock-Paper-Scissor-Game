@@ -64,14 +64,13 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; 
 }
 
 .choice:hover {
     cursor: pointer;
     box-shadow:0 0 15px #44638f;
     transform:scale(1.05);
-    
 }
 
 img {
@@ -86,7 +85,7 @@ img {
     justify-content: center;
     align-items: center;
     gap: 4rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .score-board {
@@ -142,6 +141,25 @@ img {
     color:black;
 }
 
+#weapon-text{
+    animation:pulse 1.5s infinite;
+    color: black;
+    margin-top: 1rem;
+}
 
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.08);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
 
 
